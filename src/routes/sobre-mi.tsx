@@ -15,10 +15,36 @@ export const Route = createFileRoute("/sobre-mi")({
 });
 
 const trayectoria = [
-  { y: "2024 — Hoy", r: "Diseñadora independiente", p: "Estudio propio · Clientes de marca y producto digital." },
-  { y: "2022 — 2024", r: "Senior Product Designer", p: "Estudio Nordic — Sistemas de diseño y producto SaaS." },
-  { y: "2020 — 2022", r: "Diseñadora gráfica", p: "Agencia Atlas — Identidad y editorial." },
-  { y: "2019", r: "Pasantía de diseño", p: "Revista Albor — Diseño editorial impreso." },
+  {
+    y: "dic. 2025 — actualidad",
+    r: "UX Designer",
+    p: "Banco Ripley Chile · Jornada completa · Chile · Híbrido (6 meses).",
+  },
+  {
+    y: "feb. 2025 — dic. 2025",
+    r: "UX/UI Designer",
+    p: "Sheriff · 11 meses.",
+  },
+  {
+    y: "jun. 2025 — jul. 2025",
+    r: "Diseñadora freelance",
+    p: "Alken Energía · Temporal · Diseño de presentaciones corporativas, plantillas de documentos institucionales y tarjetas de presentación, alineadas con la identidad visual de la empresa.",
+  },
+  {
+    y: "feb. 2025 — jun. 2025",
+    r: "UX/UI Designer",
+    p: "TIMIX · Contrato temporal · Región Metropolitana, Chile. Proyecto CATI — Centro Automatizado de Tratamiento de Infracciones impulsado por el Ministerio de Transportes y Telecomunicaciones. Diseño y prototipado de la plataforma y pruebas de usabilidad.",
+  },
+  {
+    y: "feb. 2025 — dic. 2025",
+    r: "Diseñadora gráfica (Temporal)",
+    p: "Global Frozen · Región Metropolitana de Santiago, Chile · Diseñadora gráfica freelance para Global Frozen (11 meses).",
+  },
+  {
+    y: "oct. 2024 — feb. 2025",
+    r: "Diseñadora & Community Manager",
+    p: "Global Frozen · Jornada completa · Chile · Presencial (5 meses).",
+  },
 ];
 
 const estudios = [
