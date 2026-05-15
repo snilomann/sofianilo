@@ -99,8 +99,9 @@ function About() {
               <div key={t.y} className="grid gap-2 border-t border-border py-6 md:grid-cols-12">
                 <p className="eyebrow md:col-span-3 text-accent">{t.y}</p>
                 <div className="md:col-span-9">
-                  <h3 className="font-display text-2xl">{t.r}</h3>
-                  <p className="text-sm text-foreground/70">{t.p}</p>
+                  <h3 className="font-display text-2xl">{t.empresa}</h3>
+                  <p className="mt-1 text-sm font-medium text-foreground/80">{t.r}</p>
+                  {t.p && <p className="mt-1 text-sm text-foreground/70">{t.p}</p>}
                 </div>
               </div>
             ))}
