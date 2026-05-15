@@ -9,38 +9,126 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SobreMiRouteImport } from './routes/sobre-mi'
+import { Route as PortafolioRouteImport } from './routes/portafolio'
+import { Route as ContactoRouteImport } from './routes/contacto'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as PortafolioUxUiRouteImport } from './routes/portafolio.ux-ui'
+import { Route as PortafolioGraficoRouteImport } from './routes/portafolio.grafico'
 
+const SobreMiRoute = SobreMiRouteImport.update({
+  id: '/sobre-mi',
+  path: '/sobre-mi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortafolioRoute = PortafolioRouteImport.update({
+  id: '/portafolio',
+  path: '/portafolio',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactoRoute = ContactoRouteImport.update({
+  id: '/contacto',
+  path: '/contacto',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PortafolioUxUiRoute = PortafolioUxUiRouteImport.update({
+  id: '/ux-ui',
+  path: '/ux-ui',
+  getParentRoute: () => PortafolioRoute,
+} as any)
+const PortafolioGraficoRoute = PortafolioGraficoRouteImport.update({
+  id: '/grafico',
+  path: '/grafico',
+  getParentRoute: () => PortafolioRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contacto': typeof ContactoRoute
+  '/portafolio': typeof PortafolioRouteWithChildren
+  '/sobre-mi': typeof SobreMiRoute
+  '/portafolio/grafico': typeof PortafolioGraficoRoute
+  '/portafolio/ux-ui': typeof PortafolioUxUiRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contacto': typeof ContactoRoute
+  '/portafolio': typeof PortafolioRouteWithChildren
+  '/sobre-mi': typeof SobreMiRoute
+  '/portafolio/grafico': typeof PortafolioGraficoRoute
+  '/portafolio/ux-ui': typeof PortafolioUxUiRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contacto': typeof ContactoRoute
+  '/portafolio': typeof PortafolioRouteWithChildren
+  '/sobre-mi': typeof SobreMiRoute
+  '/portafolio/grafico': typeof PortafolioGraficoRoute
+  '/portafolio/ux-ui': typeof PortafolioUxUiRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/contacto'
+    | '/portafolio'
+    | '/sobre-mi'
+    | '/portafolio/grafico'
+    | '/portafolio/ux-ui'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/contacto'
+    | '/portafolio'
+    | '/sobre-mi'
+    | '/portafolio/grafico'
+    | '/portafolio/ux-ui'
+  id:
+    | '__root__'
+    | '/'
+    | '/contacto'
+    | '/portafolio'
+    | '/sobre-mi'
+    | '/portafolio/grafico'
+    | '/portafolio/ux-ui'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContactoRoute: typeof ContactoRoute
+  PortafolioRoute: typeof PortafolioRouteWithChildren
+  SobreMiRoute: typeof SobreMiRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sobre-mi': {
+      id: '/sobre-mi'
+      path: '/sobre-mi'
+      fullPath: '/sobre-mi'
+      preLoaderRoute: typeof SobreMiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portafolio': {
+      id: '/portafolio'
+      path: '/portafolio'
+      fullPath: '/portafolio'
+      preLoaderRoute: typeof PortafolioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contacto': {
+      id: '/contacto'
+      path: '/contacto'
+      fullPath: '/contacto'
+      preLoaderRoute: typeof ContactoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,22 +136,43 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/portafolio/ux-ui': {
+      id: '/portafolio/ux-ui'
+      path: '/ux-ui'
+      fullPath: '/portafolio/ux-ui'
+      preLoaderRoute: typeof PortafolioUxUiRouteImport
+      parentRoute: typeof PortafolioRoute
+    }
+    '/portafolio/grafico': {
+      id: '/portafolio/grafico'
+      path: '/grafico'
+      fullPath: '/portafolio/grafico'
+      preLoaderRoute: typeof PortafolioGraficoRouteImport
+      parentRoute: typeof PortafolioRoute
+    }
   }
 }
 
+interface PortafolioRouteChildren {
+  PortafolioGraficoRoute: typeof PortafolioGraficoRoute
+  PortafolioUxUiRoute: typeof PortafolioUxUiRoute
+}
+
+const PortafolioRouteChildren: PortafolioRouteChildren = {
+  PortafolioGraficoRoute: PortafolioGraficoRoute,
+  PortafolioUxUiRoute: PortafolioUxUiRoute,
+}
+
+const PortafolioRouteWithChildren = PortafolioRoute._addFileChildren(
+  PortafolioRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContactoRoute: ContactoRoute,
+  PortafolioRoute: PortafolioRouteWithChildren,
+  SobreMiRoute: SobreMiRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
