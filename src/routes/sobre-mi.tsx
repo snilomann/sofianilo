@@ -54,10 +54,43 @@ const trayectoria = [
 ];
 
 const estudios = [
-  { y: "2023", t: "Diplomado en UX Research", i: "Interaction Design Foundation" },
-  { y: "2020", t: "Licenciatura en Diseño Gráfico", i: "Universidad Nacional" },
-  { y: "2018", t: "Tipografía avanzada", i: "Type@Cooper, Nueva York" },
+  {
+    y: "Ago. — Dic. 2025",
+    t: "Diplomado en Branding",
+    i: "Pontificia Universidad Católica de Chile",
+  },
+  {
+    y: "Abr. — Sept. 2024",
+    t: "Diplomado en UX/UI",
+    i: "Pontificia Universidad Católica de Chile",
+  },
+  {
+    y: "2020 — 2023",
+    t: "Título de Diseñadora Integral",
+    i: "Pontificia Universidad Católica de Chile",
+  },
+  {
+    y: "2016 — 2020",
+    t: "Licenciatura en Artes Visuales",
+    i: "Pontificia Universidad Católica de Chile",
+  },
 ];
+
+const herramientas = [
+  "Figma",
+  "Figma Make",
+  "Webflow",
+  "Hotjar",
+  "Maze",
+  "Illustrator",
+  "Photoshop",
+  "After Effects",
+  "LottieLab",
+  "Nano Banana",
+  "DALL·E",
+  "Shots.so",
+];
+
 
 function About() {
   return (
@@ -130,13 +163,14 @@ function About() {
             <p className="eyebrow text-muted-foreground">Herramientas</p>
           </div>
           <div className="md:col-span-9 flex flex-wrap gap-2">
-            {["Figma", "Adobe Illustrator", "InDesign", "Photoshop", "After Effects", "Webflow", "Notion", "Glyphs"].map(
+            {herramientas.map(
               (h) => (
                 <span key={h} className="eyebrow rounded-full border border-border px-4 py-2">
                   {h}
                 </span>
               ),
             )}
+
           </div>
         </section>
       </main>
