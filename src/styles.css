@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,400&family=Space+Grotesk:wght@300;400;500;600&family=Caveat:wght@500;700&family=JetBrains+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap");
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
@@ -7,9 +7,9 @@
 
 @theme inline {
   --font-display: "Fraunces", ui-serif, Georgia, serif;
-  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
-  --font-hand: "Caveat", "Bradley Hand", cursive;
+  --font-hand: "Fraunces", serif;
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -45,59 +45,59 @@
 }
 
 :root {
-  --radius: 1rem;
+  --radius: 0.25rem;
 
-  /* Crema apagada, tinta profunda */
-  --background: oklch(0.95 0.012 85);
-  --foreground: oklch(0.20 0.015 50);
-  --ink: oklch(0.20 0.015 50);
-  --cream: oklch(0.95 0.012 85);
-  --clay: oklch(0.48 0.09 35);
+  /* Blanco puro / negro tinta */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.14 0 0);
+  --ink: oklch(0.14 0 0);
+  --cream: oklch(1 0 0);
+  --clay: oklch(0.45 0 0);
 
-  /* Paleta sobria con chispa: terracota, oliva, mostaza apagada, azul pizarra */
-  --coral: oklch(0.55 0.11 35);      /* terracota */
-  --lime: oklch(0.74 0.10 105);      /* oliva mostaza apagado */
-  --lilac: oklch(0.50 0.07 295);     /* berenjena suave */
-  --sky: oklch(0.48 0.06 230);       /* azul pizarra */
+  /* Tokens neutros — todos en escala de grises */
+  --coral: oklch(0.14 0 0);
+  --lime: oklch(0.96 0 0);
+  --lilac: oklch(0.92 0 0);
+  --sky: oklch(0.88 0 0);
 
-  --card: oklch(0.97 0.010 85);
-  --card-foreground: oklch(0.20 0.015 50);
-  --popover: oklch(0.97 0.010 85);
-  --popover-foreground: oklch(0.20 0.015 50);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.14 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.14 0 0);
 
-  --primary: oklch(0.20 0.015 50);
-  --primary-foreground: oklch(0.95 0.012 85);
-  --secondary: oklch(0.91 0.018 80);
-  --secondary-foreground: oklch(0.20 0.015 50);
-  --muted: oklch(0.91 0.018 80);
-  --muted-foreground: oklch(0.45 0.015 50);
-  --accent: oklch(0.55 0.11 35);
-  --accent-foreground: oklch(0.97 0.010 85);
+  --primary: oklch(0.14 0 0);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.96 0 0);
+  --secondary-foreground: oklch(0.14 0 0);
+  --muted: oklch(0.96 0 0);
+  --muted-foreground: oklch(0.50 0 0);
+  --accent: oklch(0.14 0 0);
+  --accent-foreground: oklch(1 0 0);
   --destructive: oklch(0.5 0.16 25);
-  --destructive-foreground: oklch(0.97 0.010 85);
-  --border: oklch(0.78 0.02 60);
-  --input: oklch(0.85 0.018 60);
-  --ring: oklch(0.55 0.11 35);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.88 0 0);
+  --input: oklch(0.92 0 0);
+  --ring: oklch(0.14 0 0);
 }
 
 .dark {
-  --background: oklch(0.18 0.02 30);
-  --foreground: oklch(0.97 0.025 85);
-  --card: oklch(0.22 0.02 30);
-  --card-foreground: oklch(0.97 0.025 85);
-  --popover: oklch(0.22 0.02 30);
-  --popover-foreground: oklch(0.97 0.025 85);
-  --primary: oklch(0.97 0.025 85);
-  --primary-foreground: oklch(0.18 0.02 30);
-  --secondary: oklch(0.28 0.02 30);
-  --secondary-foreground: oklch(0.97 0.025 85);
-  --muted: oklch(0.28 0.02 30);
-  --muted-foreground: oklch(0.72 0.02 60);
-  --accent: oklch(0.78 0.18 30);
-  --accent-foreground: oklch(0.18 0.02 30);
-  --border: oklch(0.32 0.02 30);
-  --input: oklch(0.32 0.02 30);
-  --ring: oklch(0.78 0.18 30);
+  --background: oklch(0.10 0 0);
+  --foreground: oklch(0.98 0 0);
+  --card: oklch(0.14 0 0);
+  --card-foreground: oklch(0.98 0 0);
+  --popover: oklch(0.14 0 0);
+  --popover-foreground: oklch(0.98 0 0);
+  --primary: oklch(0.98 0 0);
+  --primary-foreground: oklch(0.10 0 0);
+  --secondary: oklch(0.18 0 0);
+  --secondary-foreground: oklch(0.98 0 0);
+  --muted: oklch(0.18 0 0);
+  --muted-foreground: oklch(0.65 0 0);
+  --accent: oklch(0.98 0 0);
+  --accent-foreground: oklch(0.10 0 0);
+  --border: oklch(0.22 0 0);
+  --input: oklch(0.22 0 0);
+  --ring: oklch(0.98 0 0);
 }
 
 @layer base {
@@ -115,32 +115,32 @@
     font-family: var(--font-sans);
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
-    letter-spacing: -0.005em;
+    letter-spacing: -0.011em;
   }
 
   h1, h2, h3, h4 {
     font-family: var(--font-display);
-    font-weight: 600;
-    letter-spacing: -0.025em;
+    font-weight: 500;
+    letter-spacing: -0.03em;
   }
 }
 
 @layer components {
   .display-xl {
     font-family: var(--font-display);
-    font-variation-settings: "opsz" 144, "SOFT" 100;
-    font-weight: 600;
-    font-size: clamp(3.5rem, 11vw, 10rem);
+    font-variation-settings: "opsz" 144, "SOFT" 0;
+    font-weight: 500;
+    font-size: clamp(3.5rem, 12vw, 11rem);
     line-height: 0.88;
-    letter-spacing: -0.045em;
+    letter-spacing: -0.05em;
   }
 
   .display-lg {
     font-family: var(--font-display);
     font-variation-settings: "opsz" 144;
-    font-weight: 600;
-    font-size: clamp(2.5rem, 6vw, 5.5rem);
-    line-height: 0.95;
+    font-weight: 500;
+    font-size: clamp(2.25rem, 5.5vw, 5rem);
+    line-height: 0.96;
     letter-spacing: -0.035em;
   }
 
@@ -148,75 +148,57 @@
     font-family: var(--font-mono);
     font-size: 0.7rem;
     text-transform: uppercase;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.2em;
     font-weight: 500;
   }
 
   .hand {
-    font-family: var(--font-hand);
-    font-weight: 700;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 400;
   }
 
   .sticker {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    padding: 0.4rem 0.9rem;
+    padding: 0.35rem 0.85rem;
     border-radius: 999px;
-    border: 1.5px solid var(--foreground);
-    background: var(--background);
+    border: 1px solid var(--foreground);
+    background: transparent;
     font-family: var(--font-mono);
-    font-size: 0.7rem;
-    letter-spacing: 0.18em;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    box-shadow: 3px 3px 0 var(--foreground);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: background 0.2s ease, color 0.2s ease;
   }
   .sticker:hover {
-    transform: translate(-2px, -2px) rotate(-1deg);
-    box-shadow: 5px 5px 0 var(--foreground);
+    background: var(--foreground);
+    color: var(--background);
   }
 
-  .blob {
-    border-radius: 62% 38% 55% 45% / 50% 60% 40% 50%;
-  }
+  .blob { border-radius: 999px; }
 
-  .grain::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    opacity: 0.05;
-    z-index: 1;
-    mix-blend-mode: multiply;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  }
+  .grain::before { content: none; }
 
-  @keyframes wiggle {
-    0%, 100% { transform: rotate(-2deg); }
-    50% { transform: rotate(2deg); }
-  }
   @keyframes float-slow {
-    0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
-    50% { transform: translateY(-14px) rotate(calc(var(--r, 0deg) + 3deg)); }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
   }
-  @keyframes spin-slow {
-    to { transform: rotate(360deg); }
-  }
-  .animate-wiggle { animation: wiggle 0.6s ease-in-out infinite; }
-  .animate-float { animation: float-slow 6s ease-in-out infinite; }
-  .animate-spin-slow { animation: spin-slow 18s linear infinite; }
+  @keyframes spin-slow { to { transform: rotate(360deg); } }
+  .animate-float { animation: float-slow 7s ease-in-out infinite; }
+  .animate-spin-slow { animation: spin-slow 22s linear infinite; }
 
   .marquee {
     display: flex;
     overflow: hidden;
     gap: 3rem;
-    mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
   }
   .marquee-track {
     display: flex;
     gap: 3rem;
-    animation: marquee 28s linear infinite;
+    animation: marquee 36s linear infinite;
     flex-shrink: 0;
   }
   @keyframes marquee {
