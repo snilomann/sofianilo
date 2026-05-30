@@ -4,17 +4,55 @@ export const Route = createFileRoute("/portafolio/ux-ui")({
   head: () => ({
     meta: [
       { title: "UX / UI — Portafolio" },
-      { name: "description", content: "Productos digitales, sistemas de diseño y aplicaciones móviles." },
+      { name: "description", content: "Productos digitales, plataformas y experiencias diseñadas para distintos sectores." },
     ],
   }),
   component: UxPage,
 });
 
 const projects = [
-  { t: "Marea", c: "App móvil · 2024", d: "Aplicación de meditación con ritmos del mar. UX research, IA y UI completa.", role: "Diseño de producto", tone: "from-accent/20 to-clay/10" },
-  { t: "Hilo Bank", c: "Banca digital · 2023", d: "Rediseño completo de la experiencia de banca personal y sistema de diseño.", role: "Lead UX/UI", tone: "from-foreground/10 to-foreground/0" },
-  { t: "Sembrar", c: "Web app · 2023", d: "Plataforma de inversión en proyectos agrícolas sostenibles.", role: "UX/UI", tone: "from-clay/25 to-accent/5" },
-  { t: "Atlas Docs", c: "Sistema de diseño · 2022", d: "Librería de componentes y documentación para equipo de 30 diseñadores.", role: "Design Systems", tone: "from-foreground/5 to-accent/15" },
+  {
+    t: "Sistema de Notificaciones Sheriff",
+    c: "Producto digital · 2025",
+    d: "Rediseño del sistema de notificaciones de Sheriff. Tabla adaptable a web y móvil que organiza la información clave priorizando legibilidad, jerarquía visual y experiencia de usuario.",
+    role: "UX/UI · Figma, Notion",
+    tone: "from-accent/20 to-clay/10",
+  },
+  {
+    t: "Creador de Formularios Sheriff",
+    c: "Plataforma · 2025",
+    d: "Nueva funcionalidad para crear, personalizar y distribuir formularios digitales. Diseñado con foco en usabilidad, flexibilidad y escalabilidad: configuración dinámica de campos, validaciones y flujos de envío.",
+    role: "UX/UI · Figma, Hotjar, LottieFiles",
+    tone: "from-foreground/10 to-foreground/0",
+  },
+  {
+    t: "Vista Compliance Sheriff",
+    c: "Producto digital · 2025",
+    d: "Rediseño de la funcionalidad Compliance con una interfaz más limpia y coherente. El nuevo diseño reduce fricciones en el flujo de trabajo y permite ejecutar tareas de forma más ágil e intuitiva.",
+    role: "UX/UI · Figma, Hotjar",
+    tone: "from-clay/25 to-accent/5",
+  },
+  {
+    t: "Plataforma CATI",
+    c: "Ministerio de Transportes · 2025",
+    d: "Diseño UX/UI de la Plataforma CATI (Centro Automatizado de Tratamiento de Infracciones) del MTT. Definición de flujos, arquitectura de información, prototipado y validación con pruebas de usabilidad con distintos perfiles del ministerio.",
+    role: "Lead UX/UI · Figma, Hotjar",
+    tone: "from-foreground/5 to-accent/15",
+  },
+  {
+    t: "thesheriff.cl",
+    c: "Sitio web · 2025",
+    d: "Rediseño integral del sitio web de Sheriff: arquitectura de información, interfaz visual y flujos de navegación. Una experiencia coherente, escalable y orientada a la conversión.",
+    role: "Lead UX/UI · Webflow, Figma, LottieFiles",
+    tone: "from-accent/25 to-clay/10",
+  },
+  {
+    t: "Mottai",
+    c: "StartUp Fintech HORECA · 2026",
+    d: "Diseño de producto, branding y experiencia de usuario de Mottai, plataforma de finanzas para el sector HORECA. Transforma la facturación electrónica en una herramienta de inteligencia financiera con detección de oportunidades de ahorro en tiempo real.",
+    role: "Product Design · Figma, UX Pilot",
+    tone: "from-clay/20 to-foreground/5",
+  },
 ];
 
 function UxPage() {
@@ -27,7 +65,7 @@ function UxPage() {
         >
           <div className="md:col-span-5">
             <div className={`aspect-[16/10] w-full overflow-hidden rounded-sm bg-gradient-to-br ${p.tone} flex items-center justify-center`}>
-              <span className="font-display text-5xl italic text-foreground/30">{p.t}</span>
+              <span className="font-display text-4xl italic text-foreground/30 text-center px-4">{p.t}</span>
             </div>
           </div>
           <div className="md:col-span-6 md:col-start-7">
