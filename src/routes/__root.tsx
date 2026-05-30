@@ -72,14 +72,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Sofia Nilo" },
+      { name: "description", content: "Portafolio de Diseño gráfico & UX UI" },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Sofia Nilo" },
+      { property: "og:description", content: "Portafolio de Diseño gráfico & UX UI" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Sofia Nilo" },
+      { name: "twitter:description", content: "Portafolio de Diseño gráfico & UX UI" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/5270f1d7-c290-4ad0-ba7e-415ad846ae91/id-preview-bdc60b18--d1cd55d3-c77b-4380-8764-b0df6b33ea9a.lovable.app-1780102079112.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/5270f1d7-c290-4ad0-ba7e-415ad846ae91/id-preview-bdc60b18--d1cd55d3-c77b-4380-8764-b0df6b33ea9a.lovable.app-1780102079112.png" },
     ],
     links: [
       {
